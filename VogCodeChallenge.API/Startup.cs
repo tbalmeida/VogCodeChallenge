@@ -31,6 +31,8 @@ namespace VogCodeChallenge.API
             services.AddDbContext<ApplicationDbContext>(options =>
                options.UseInMemoryDatabase(databaseName: "VogInMemoryDB")); //, ServiceLifetime.Scoped, ServiceLifetime.Scoped);
             services.AddControllers();
+
+            services.AddScoped<IEmployeeRepository, EmployeeRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
