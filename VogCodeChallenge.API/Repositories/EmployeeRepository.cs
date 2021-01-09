@@ -1,5 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Linq;
 using VogCodeChallenge.API.Models.Entities;
 using VogCodeChallenge.API.Repositories.Interfaces;
 
@@ -16,12 +16,14 @@ namespace VogCodeChallenge.API.Repositories
 
         public IEnumerable<Employee> GetAll()
         {
-            throw new NotImplementedException();
+            var ret = _context.Employees.OrderBy(e => e.FirstName).ToList();
+            return ret;
         }
 
         public IList<Employee> ListAll()
         {
-            throw new NotImplementedException();
+            var ret = _context.Employees.OrderBy(e => e.FirstName).ToList();
+            return ret;
         }
     }
 }

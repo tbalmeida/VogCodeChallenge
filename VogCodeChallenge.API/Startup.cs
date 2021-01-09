@@ -11,6 +11,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using VogCodeChallenge.API.Repositories;
+using VogCodeChallenge.API.Repositories.Interfaces;
 
 namespace VogCodeChallenge.API
 {
