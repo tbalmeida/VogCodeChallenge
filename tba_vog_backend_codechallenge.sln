@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VogCodeChallenge.API", "VogCodeChallenge.API\VogCodeChallenge.API.csproj", "{FAF260C7-3075-4772-82E1-BBD51FA3D646}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VogCodeChallenge.API", "VogCodeChallenge.API\VogCodeChallenge.API.csproj", "{FAF260C7-3075-4772-82E1-BBD51FA3D646}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3E2D1519-1690-4318-B264-684CA7E5AA12}"
 	ProjectSection(SolutionItems) = preProject
@@ -12,11 +12,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{8E5521D7-60C8-4FCE-AC93-A27FAF4C028C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VogCodeChallenge.App", "VogCodeChallenge.App\VogCodeChallenge.App.csproj", "{2F21753B-EAF7-400B-851A-B31953EFDD60}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VogCodeChallenge.App", "VogCodeChallenge.App\VogCodeChallenge.App.csproj", "{2F21753B-EAF7-400B-851A-B31953EFDD60}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VogCodeChallenge.Models", "VogCodeChallenge.Models\VogCodeChallenge.Models.csproj", "{B289A5EF-50DC-4630-80E1-C9713960EB01}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VogCodeChallenge.Models", "VogCodeChallenge.Models\VogCodeChallenge.Models.csproj", "{B289A5EF-50DC-4630-80E1-C9713960EB01}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{E11909C9-3AE8-426A-97BA-6E075BA95C01}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{E11909C9-3AE8-426A-97BA-6E075BA95C01}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AWS-Vog", "AWS-Vog\AWS-Vog.csproj", "{5A6227CF-E672-492F-A86F-81BF6F55F2D3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AWS-Vog.Tests", "AWS-Vog.Tests\AWS-Vog.Tests.csproj", "{9D034504-4C9B-44E4-BAD7-AF7144E13FB6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,6 +48,14 @@ Global
 		{E11909C9-3AE8-426A-97BA-6E075BA95C01}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E11909C9-3AE8-426A-97BA-6E075BA95C01}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E11909C9-3AE8-426A-97BA-6E075BA95C01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A6227CF-E672-492F-A86F-81BF6F55F2D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A6227CF-E672-492F-A86F-81BF6F55F2D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A6227CF-E672-492F-A86F-81BF6F55F2D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A6227CF-E672-492F-A86F-81BF6F55F2D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D034504-4C9B-44E4-BAD7-AF7144E13FB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D034504-4C9B-44E4-BAD7-AF7144E13FB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D034504-4C9B-44E4-BAD7-AF7144E13FB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D034504-4C9B-44E4-BAD7-AF7144E13FB6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
