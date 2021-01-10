@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VogCodeChallenge.API", "Vog
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3E2D1519-1690-4318-B264-684CA7E5AA12}"
 	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		..\..\..\Downloads\Bradt_vog_backend_codechalleneg-master\.aws\credentials = ..\..\..\Downloads\Bradt_vog_backend_codechalleneg-master\.aws\credentials
 		README.md = README.md
 	EndProjectSection
 EndProject
@@ -18,9 +20,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VogCodeChallenge.Models", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{E11909C9-3AE8-426A-97BA-6E075BA95C01}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AWS-Vog", "AWS-Vog\AWS-Vog.csproj", "{5A6227CF-E672-492F-A86F-81BF6F55F2D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VogCodeChallenge-AWS", "VogCodeChallenge-AWS\VogCodeChallenge-AWS.csproj", "{A1969D0B-E15C-4840-BA61-1E40B51494D2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AWS-Vog.Tests", "AWS-Vog.Tests\AWS-Vog.Tests.csproj", "{9D034504-4C9B-44E4-BAD7-AF7144E13FB6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VogCodeChallenge-AWS.Tests", "VogCodeChallenge-AWS.Tests\VogCodeChallenge-AWS.Tests.csproj", "{66F5EBD8-1AB7-481B-BD8B-DF8D5817029A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -48,14 +50,14 @@ Global
 		{E11909C9-3AE8-426A-97BA-6E075BA95C01}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E11909C9-3AE8-426A-97BA-6E075BA95C01}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E11909C9-3AE8-426A-97BA-6E075BA95C01}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5A6227CF-E672-492F-A86F-81BF6F55F2D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5A6227CF-E672-492F-A86F-81BF6F55F2D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5A6227CF-E672-492F-A86F-81BF6F55F2D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5A6227CF-E672-492F-A86F-81BF6F55F2D3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9D034504-4C9B-44E4-BAD7-AF7144E13FB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9D034504-4C9B-44E4-BAD7-AF7144E13FB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9D034504-4C9B-44E4-BAD7-AF7144E13FB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9D034504-4C9B-44E4-BAD7-AF7144E13FB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1969D0B-E15C-4840-BA61-1E40B51494D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1969D0B-E15C-4840-BA61-1E40B51494D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1969D0B-E15C-4840-BA61-1E40B51494D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1969D0B-E15C-4840-BA61-1E40B51494D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66F5EBD8-1AB7-481B-BD8B-DF8D5817029A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66F5EBD8-1AB7-481B-BD8B-DF8D5817029A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66F5EBD8-1AB7-481B-BD8B-DF8D5817029A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66F5EBD8-1AB7-481B-BD8B-DF8D5817029A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
