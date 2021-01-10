@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System;
 using VogCodeChallenge.App;
 using VogCodeChallenge.App.Seeds;
 
@@ -16,7 +18,15 @@ namespace VogCodeChallenge.API
                 var services = scope.ServiceProvider;
                 var context = services.GetRequiredService<ApplicationDbContext>();
 
-                DataSeed.Initialize(services);
+                var inMemoryDb = Convert.ToBoolean(Environment.GetEnvironmentVariable("InMemoryDb"));
+                if (inMemoryDb)
+                {
+                    // seed the in-memory db
+                    DataSeed.Initialize(services);
+                } else {
+                    context.Database.Migrate();
+                    // TODO - add seeding for custom db
+                }
             }
 
             host.Run();

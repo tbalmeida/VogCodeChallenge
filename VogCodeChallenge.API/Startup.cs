@@ -7,6 +7,7 @@ using Microsoft.Extensions.Hosting;
 using VogCodeChallenge.App;
 using VogCodeChallenge.App.Repositories;
 using VogCodeChallenge.App.Repositories.Interfaces;
+using VogCodeChallenge.App.Seeds;
 
 namespace VogCodeChallenge.API
 {
@@ -29,13 +30,11 @@ namespace VogCodeChallenge.API
                    options.UseInMemoryDatabase(databaseName: "VogInMemoryDB"));
             } else {
                 services.AddDbContext<ApplicationDbContext>(options =>
-                    options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")
-                    //,
-                    //b =>
-                    //{
-                    //    b.MigrationsAssembly("MKTFY.App");
-                    //}
-                    )
+                    options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection"),
+                    b =>
+                    {
+                        b.MigrationsAssembly("VogCodeChallenge.App");
+                    })
                 );
             }
 
