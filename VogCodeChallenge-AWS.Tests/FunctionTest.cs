@@ -27,7 +27,7 @@ namespace VogCodeChallenge_AWS.Tests
                 {
                     new DynamoDBEvent.DynamodbStreamRecord
                     {
-                        AwsRegion = "us-west-2",
+                        AwsRegion = "ca-central-1",
                         Dynamodb = new StreamRecord
                         {
                             ApproximateCreationDateTime = DateTime.Now,
