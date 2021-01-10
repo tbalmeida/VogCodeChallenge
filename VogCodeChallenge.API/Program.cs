@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using VogCodeChallenge.App;
+using VogCodeChallenge.App.Seeds;
 
 namespace VogCodeChallenge.API
 {
@@ -8,8 +10,6 @@ namespace VogCodeChallenge.API
     {
         public static void Main(string[] args)
         {
-            //CreateHostBuilder(args).Build().Run();
-
             var host = CreateHostBuilder(args).Build();
             using (var scope = host.Services.CreateScope())
             {

@@ -10,3 +10,24 @@ services:
     ports:
       - "30000:80"
       - "30001:443"
+    environment:
+      - InMemoryDb=true
+      - ConnectionStrings__DefaultConnection=Server=vog.db;Database=challenge_db;User Id=challenge_user;password=challenge_pwd
+    depends_on:
+      - "vog.db"
+
+  vog.db:
+    restart: on-failure
+    image: "mdillon/postgis:11"
+    container_name: "vog.db"
+    environment:
+      - POSTGRES_USER=challenge_user
+      - POSTGRES_DB=challenge_db
+      - POSTGRES_PASSWORD=challenge_pwd
+    volumes:
+      - vog-challenge-db:/var/lib/postgresql/data
+    ports:
+      - "31000:5432"
+
+volumes:
+  vog-challenge-db:

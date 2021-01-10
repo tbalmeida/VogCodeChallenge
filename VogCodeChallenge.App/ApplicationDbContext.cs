@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using VogCodeChallenge.Models.Entities;
 
-namespace VogCodeChallenge.API
+namespace VogCodeChallenge.App
 {
     public class ApplicationDbContext : DbContext
     {

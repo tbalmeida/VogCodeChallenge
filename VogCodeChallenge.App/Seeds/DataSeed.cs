@@ -2,9 +2,9 @@
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Linq;
-using VogCodeChallenge.API.Models.Entities;
+using VogCodeChallenge.Models.Entities;
 
-namespace VogCodeChallenge.API
+namespace VogCodeChallenge.App.Seeds
 {
     public class DataSeed
     {
@@ -15,7 +15,7 @@ namespace VogCodeChallenge.API
             {
                 if (context.Companies.Any())
                 {
-                return;
+                    return;
                 }
 
                 context.Companies.Add(new Company { Id = 1, Name = "Acme" });
@@ -27,13 +27,13 @@ namespace VogCodeChallenge.API
                 );
 
                 context.JobTitles.AddRange(
-                    new JobTitle { Id = 1, Title = "Manager", Managing = true},
-                    new JobTitle { Id = 2, Title = "Consultant", Managing = false}
+                    new JobTitle { Id = 1, Title = "Manager", Managing = true },
+                    new JobTitle { Id = 2, Title = "Consultant", Managing = false }
                 );
 
                 context.Employees.AddRange(
-                    new Employee { Id = 1, FirstName = "Samuel", LastName = "Champlain", DepartmentId = 1, JobTitleId = 1, ResidentialAddress = "Rue Orleans, 3, Quebec QC"},
-                    new Employee { Id = 2, FirstName = "Jack", LastName = "Smith", DepartmentId = 3, JobTitleId = 2, ResidentialAddress = "54 Elbow Drive, Calgary AB"}
+                    new Employee { Id = 1, FirstName = "Samuel", LastName = "Champlain", DepartmentId = 1, JobTitleId = 1, ResidentialAddress = "Rue Orleans, 3, Quebec QC" },
+                    new Employee { Id = 2, FirstName = "Jack", LastName = "Smith", DepartmentId = 3, JobTitleId = 2, ResidentialAddress = "54 Elbow Drive, Calgary AB" }
                 );
 
                 context.SaveChanges();

@@ -1,18 +1,12 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using VogCodeChallenge.API.Repositories;
-using VogCodeChallenge.API.Repositories.Interfaces;
+using VogCodeChallenge.App;
+using VogCodeChallenge.App.Repositories;
+using VogCodeChallenge.App.Repositories.Interfaces;
 
 namespace VogCodeChallenge.API
 {
@@ -28,8 +22,23 @@ namespace VogCodeChallenge.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<ApplicationDbContext>(options =>
-               options.UseInMemoryDatabase(databaseName: "VogInMemoryDB")); //, ServiceLifetime.Scoped, ServiceLifetime.Scoped);
+            var inMemoryDb = Configuration.GetValue<bool>("InMemoryDb");
+            if (inMemoryDb)
+            {
+                services.AddDbContext<ApplicationDbContext>(options =>
+                   options.UseInMemoryDatabase(databaseName: "VogInMemoryDB"));
+            } else {
+                services.AddDbContext<ApplicationDbContext>(options =>
+                    options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")
+                    //,
+                    //b =>
+                    //{
+                    //    b.MigrationsAssembly("MKTFY.App");
+                    //}
+                    )
+                );
+            }
+
             services.AddControllers();
 
             services.AddScoped<IEmployeeRepository, EmployeeRepository>();

@@ -1,9 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
-using VogCodeChallenge.API.Models;
-using VogCodeChallenge.API.Models.Entities;
-using VogCodeChallenge.API.Repositories.Interfaces;
+using VogCodeChallenge.App.Repositories.Interfaces;
+using VogCodeChallenge.Models.ViewModels;
 
 namespace VogCodeChallenge.API.Controllers
 {

@@ -2,7 +2,7 @@
 using VogCodeChallenge.Models.Entities;
 using VogCodeChallenge.Models.ViewModels;
 
-namespace VogCodeChallenge.API.Repositories.Interfaces
+namespace VogCodeChallenge.App.Repositories.Interfaces
 {
     public interface IEmployeeRepository
     {
