@@ -21,8 +21,10 @@ namespace VogCodeChallenge_AWS
             {
                 context.Logger.LogLine($"Event ID: {record.EventID}");
                 context.Logger.LogLine($"Event Name: {record.EventName}");
-				
-				// TODO: Add business logic processing the record.Dynamodb object.
+
+                // TODO: Add business logic processing the record.Dynamodb object.
+                Console.WriteLine($"Event ID: {record.EventID}");
+                Console.WriteLine($"Event Name: {record.EventName}");
             }
 
             context.Logger.LogLine("Stream processing complete.");
